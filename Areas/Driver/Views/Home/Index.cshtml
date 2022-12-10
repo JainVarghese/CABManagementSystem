@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Booking>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid">
+    @if (Model.Any())
+    {
+        <div class="row gap-5">
+            @foreach (var item in Model)
+            {
+                <div class=" col-sm-3 ">
+                    <p><b>Source= </b>@item.ApplicationUser.FirstName @item.ApplicationUser.LastName</p>
+                    <p><b>Source= </b>@item.Route.source</p>
+                    <p><b>Destination = </b>@item.Route.Destination</p>
+                    <p><b>Date And Time = </b>@item.Date</p>
+                    <td typestyle="padding : 0px; margin : 0px ; width: 80px"><a id="chgtext" asp-action="CommitRide" asp-route-id="@item.Id" class="btn btn-primary" style="width:80px" onclick="">Commit</a></td>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+
+            You have no pick up Requests
+        </div>
+    }
+</div>

@@ -1,0 +1,114 @@
+﻿@model CSM.Models.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+@*<div class="container">
+    <div class="row">
+        <div class="col-sm-3 offset-sm-3">
+            <form method="post">
+                
+
+                <div>
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div>
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                
+                <div class="d-grid mt-4">
+                    <button class="btn btn-primary">Login</button>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+*@
+
+                    <header>
+    <style>
+      #intro {
+        background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+
+      }
+
+      /* Height for devices larger than 576px */
+     
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+
+    
+
+    <!-- Background image -->
+    <div id="intro" class="bg-image shadow-2-strong">
+      <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-4 col-md-8">
+              <form class="bg-white  rounded-10 shadow-5-strong p-5" method="post" style="border-radius:8px;">
+                  <div class="p-2">
+                      <label asp-for="Email"></label>
+                      <input asp-for="Email" class="form-control" />
+                      <span asp-validation-for="Email" class="text-danger"></span>
+                  </div>
+
+                  <div class="p-2">
+                      <label asp-for="Password"></label>
+                      <input asp-for="Password" class="form-control" />
+                      <span asp-validation-for="Password" class="text-danger"></span>
+                  </div>
+
+                <!-- 2 column grid layout for inline styling -->
+                <div class="row mb-4 p-3">
+                  @*<div class="col d-flex justify-content-center">
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                      <label class="form-check-label" for="form1Example3">
+                        Remember me
+                      </label>
+                    </div>
+                  </div>*@
+
+                  <div class="col text-center p-3">
+                    <!-- Simple link -->
+                    <a href="#!">Forgot password?</a>
+                  </div>
+                </div>
+
+                <!-- Submit button -->
+                <div class="d-grid mt-4">
+                    <button class="btn btn-primary">Login</button>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+  <!--Main Navigation-->
+
+  

@@ -1,0 +1,21 @@
+﻿@model CSM.Models.ViewModels.RoutesViewModel
+@{
+    ViewData["Title"] = "ConfirmRide";
+}
+
+<h1>ConfirmRide</h1>
+
+<div>
+    <table>
+        <tr>
+            <th>From</th>
+            <th>To</th>
+            <th>Cost</th>
+        </tr>
+        <tr>
+            <td>@Model.Source</td>
+          <td>@Model.Destination</td>
+            <td>@Model.Cost</td>
+        </tr>
+    </table>
+</div>

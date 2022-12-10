@@ -1,0 +1,36 @@
+﻿@model CSM.Models.ViewModels.RoutesViewModel;
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>New Route</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <form method="post">
+
+                <div>
+                    <label asp-for="Source"></label>
+                    <textarea asp-for="Source"  class="form-control">
+
+                    </textarea>
+                    <span asp-validation-for="Source" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Destination"></label>
+                    <textarea asp-for="Destination" class="form-control"></textarea>
+                    <span asp-validation-for="Destination" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Cost"></label>
+                    <textarea asp-for="Cost" asp-for="Cost" class="form-control" ></textarea>
+                    <span asp-validation-for="Cost" class="text-danger"></span>
+                </div>
+                <div class="d-grid mt-4">
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

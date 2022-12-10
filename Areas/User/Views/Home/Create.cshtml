@@ -1,0 +1,35 @@
+﻿@using CSM.Models.ViewModels;
+@model BookingViewModel;
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Book Here</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <form method="post">
+
+                <div>
+                    <label asp-for="Source"></label>
+                    <select asp-items="@(new SelectList(Model.Routes,"source","source") )" asp-for="Source" class="form-control"></select>
+                    <span asp-validation-for="Source" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Destination"></label>
+                    <select asp-items="@(new SelectList(Model.Routes,"Destination","Destination") )" asp-for="Destination" class="form-control"></select>
+                    <span asp-validation-for="Destination" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Date"></label>
+                    <input type="datetime-local" asp-for="Date" class="form-control"/>
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="d-grid mt-4">
+                    <button class="btn btn-primary">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

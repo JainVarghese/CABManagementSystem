@@ -1,0 +1,131 @@
+﻿@model CSM.Models.ViewModels.RegisterDriverViewModel;
+@{
+	ViewData["Title"] = "RegisterDriver";
+}
+<style>
+
+	.container {
+		margin =0px;
+		padding =0px
+	}
+</style>
+
+<section class="h-100 h-custom gradient-custom-2">
+	<form method="post">
+	<div class="container py-5 h-100">
+		<div class="row d-flex justify-content-center align-items-center h-100">
+			<div class="col-12">
+				<div class="card card-registration card-registration-2" style="border-radius: 15px;">
+					<div class="card-body p-0">
+						<div class="row g-0">
+						 
+							<div class="col-lg-6">
+									<div class="p-5">
+									<h3 class="fw-normal mb-5">General Infomation</h3>
+									<div class="row">
+										<div class="col-md-6 mb-4 pb-2">
+
+											<div class="form-outline">
+												<input asp-for="FirstName" type="text" id="form3Examplev2" class="form-control form-control-lg" />
+												<label asp-for="FirstName" class="form-label" for="form3Examplev2">First name</label>
+												<span asp-validation-for="FirstName"></span>
+											</div>
+
+										</div>
+										<div class="col-md-6 mb-4 pb-2">
+
+											<div class="form-outline">
+												<input asp-for="LastName" type="text" id="form3Examplev3" class="form-control form-control-lg" />
+												<label asp-for="LastName" class="form-label" for="form3Examplev3">Last name</label>
+												<span asp-validation-for="LastName"></span>
+											</div>
+
+										</div>
+										<div class="col-md-7 mb-4 pb-2">
+
+											<div class="form-outline form-white">
+												<input asp-for="PhoneNumber" type="text" id="form3Examplea8" class="form-control form-control-lg" />
+												<label asp-for="PhoneNumber" class="form-label" for="form3Examplea8">Phone Number</label>
+												<span asp-validation-for="PhoneNumber"></span>
+											</div>
+										</div>
+
+										<div class="mb-4">
+											<div class="form-outline form-white">
+												<input asp-for="Email" type="text" id="form3Examplea9" class="form-control form-control-lg" />
+												<label asp-for="Email" class="form-label" for="form3Examplea9">Your Email</label>
+												<span asp-validation-for="Email"></span>
+											</div>
+										</div>
+										<div class="  mb-4">
+											<div class="form-outline form-white">
+												<label asp-for="Password"></label>
+												<input asp-for="Password" class="form-control" />
+												<span asp-validation-for="Password" class="text-danger"></span>
+											</div>
+										</div>
+
+										<div class="mb-4">
+											<div class="form-outline form-white">
+												<label asp-for="ConfirmPassword"></label>
+												<input asp-for="ConfirmPassword" class="form-control" />
+												<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+							<div class="col-lg-6 bg-indigo h-100 ">
+									<div class="p-5" style="background-color:black ; color : yellow; border-bottom-right-radius:15px; border-top-right-radius:15px ; height : 700px">
+										<h3 class="fw-normal mb-5">Contact Details</h3>
+
+										<div class="mb-4 pb-2">
+											<div class="form-outline form-white">
+											<label asp-for="LicenceNumber"></label>
+											<input input asp-for="LicenceNumber" type="text" id="form3Examplea2" class="form-control form-control-lg" />
+											<span asp-validation-for="LicenceNumber" class="text-danger"></span>
+										    </div>
+										</div>
+
+							<div class="row">
+								<div class="col-md-5 mb-4 pb-2">
+
+									<div class="form-outline form-white">
+
+										<input asp-for="VehicleNumber" type="text" id="form3Examplea4" class="form-control form-control-lg" />
+										<label asp-for="VehicleNumber" class="form-label" for="form3Examplea4">Vehicle Number</label>
+										<span asp-validation-for="VehicleNumber" class="text-danger"></span>
+									</div>
+
+								</div>
+								<div class="col-md-7 mb-4 pb-2">
+
+									<div class="form-outline form-white">
+										<select asp-items="@Html.GetEnumSelectList<VehicleType>()" asp-for="VehicleType" type="text" id="form3Examplea5" class="form-control form-control-lg" ></select>
+										<label asp-for="VehicleType" class="form-label" for="form3Examplea5">Vehicle Type</label>
+										<span asp-validation-for="VehicleType" class="text-danger"></span>
+									</div>
+
+								</div>
+							</div>
+										<div class="d-flex justify-content-center">
+
+											<button class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+												Register
+											</button>
+											<div asp-validation-summary="All" class="text-danger"></div>
+										</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+</form> 
+</section>
